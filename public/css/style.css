@@ -48,6 +48,7 @@
   border-radius: 45px;
   display: inline-block;
   margin: 4px;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .github {
@@ -93,6 +94,11 @@
   display: inline-block;
   border-radius: 5px;
   -webkit-border-radius: 5px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+.readme:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 121, 107, 0.25);
 }
 
 /* .readme:hover{
@@ -113,15 +119,21 @@
   margin-top: 1.5em;
   border-radius: 5px;
   -webkit-border-radius: 5px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, color 0.25s ease, background-color 0.25s ease;
 }
-
-.contactme:hover{
+.contactme:hover {
   color: #00796b;
   background-color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.3);
 }
 /* main body */
 
 /* body-color */
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   color: #333;
@@ -195,12 +207,12 @@ nav i {
 /* main */
 
 /* main {
-  background: url(../../assets/img/bg.png) repeat;
+  background: url(../img/bg.png) repeat;
   padding-left: 190px;
 } */
 
 main {
-  background: url(../../assets/img/bg.png) repeat;
+  background: url(../img/bg.png) repeat;
   padding-left: 190px;
 }
 
@@ -241,6 +253,7 @@ ul.side-nav.fixed a {
   display: block;
   line-height: 100%;
   padding: 10px 0 12px;
+  transition: background-color 0.2s ease, border-left-width 0.2s ease, padding-left 0.2s ease;
 }
 
 ul.table-of-contents li.logo a.active, ul.table-of-contents li.logo a:hover {
@@ -315,7 +328,7 @@ h3 {
 /* Original */
 
 /* #intro.section {
-  background: url(../../assets/img/white-ai-wallpaper.jpg) no-repeat top center/cover;
+  background: url(../img/white-ai-wallpaper.jpg) no-repeat top center/cover;
   position: relative;
 } */
 
@@ -372,6 +385,11 @@ h3 {
 
 .card {
   margin-bottom: 60px;
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.35s ease;
+}
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
 }
 
 .card .role {
@@ -486,6 +504,12 @@ a.hoverline:hover {
   padding-bottom: 20px;
 }
 
+/* Ensure Skills card text (including Other) is dark, not white */
+#skills .card .card-content,
+#skills .card .row {
+  color: #333;
+}
+
 #skills .col img.responsive-img {
   margin: 0 auto;
   max-height: 100px;
@@ -493,6 +517,10 @@ a.hoverline:hover {
   text-align: center;
   vertical-align: middle;
   display: table-cell;
+  transition: transform 0.3s ease;
+}
+#skills .col:hover img.responsive-img {
+  transform: scale(1.08);
 }
 
 .card.large .card-content p {
@@ -691,4 +719,82 @@ small {
   #intro.section {
     background-position-x: 30%;
   }
+}
+
+/* ===== Load and scroll animations (pro) ===== */
+:root {
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Section title: underline grow when section is visible */
+.animate-on-scroll.visible .page-title {
+  animation: slideInLeft 0.6s var(--ease-out-expo) forwards;
+}
+
+/* Intro: animate on page load with pro easing */
+.animate-on-load {
+  opacity: 0;
+  animation: fadeInUp 1.2s var(--ease-out-expo) forwards;
+}
+
+.animate-on-load.delay-1 { animation-delay: 0.25s; }
+.animate-on-load.delay-2 { animation-delay: 0.5s; }
+.animate-on-load.delay-3 { animation-delay: 0.75s; }
+.animate-on-load.delay-4 { animation-delay: 1s; }
+
+/* Sections: animate when they scroll into view */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.9s var(--ease-out-expo), transform 0.9s var(--ease-out-expo);
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered card reveal inside visible section */
+.animate-on-scroll.visible .card {
+  animation: fadeInUp 0.6s var(--ease-out-expo) forwards;
+  animation-delay: 0.12s;
+}
+.animate-on-scroll.visible .container > .card:nth-child(1) { animation-delay: 0.06s; }
+.animate-on-scroll.visible .container > .card:nth-child(2) { animation-delay: 0.12s; }
+.animate-on-scroll.visible .container > .card:nth-child(3) { animation-delay: 0.18s; }
+.animate-on-scroll.visible .container > .card:nth-child(4) { animation-delay: 0.24s; }
+.animate-on-scroll.visible .container > .card:nth-child(5) { animation-delay: 0.3s; }
+.animate-on-scroll.visible .container > .card:nth-child(n+6) { animation-delay: 0.36s; }
+
+.animate-on-scroll .container > .card {
+  opacity: 0;
+  transform: translateY(20px);
 }
