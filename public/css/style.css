@@ -550,6 +550,209 @@ a.hoverline:hover {
   margin-bottom: 0;
 }
 
+/* AI Notes: download row below card (outside .card) */
+#projects .electron-app-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 0px;
+  text-decoration: none;
+  color: inherit;
+  padding: 4px 0;
+}
+#projects .electron-app-download:hover .electron-app-download-label,
+#projects .electron-app-download:focus .electron-app-download-label {
+  text-decoration: underline;
+}
+#projects .electron-app-download-icon {
+  flex-shrink: 0;
+}
+#projects .electron-app-download-label {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+#projects .electron-project-reveal-logos {
+  margin-bottom: 0.5rem;
+}
+
+/* AI Notes project card: screenshot carousel */
+#projects .project-card-slider-wrap {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+}
+#projects .project-image-slider {
+  position: relative;
+  height: 100%;
+  width: 100%;
+}
+#projects .project-image-slider-viewport {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  outline: none;
+}
+#projects .project-image-slider-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.35s ease;
+  will-change: transform;
+}
+#projects .project-image-slider-slide {
+  flex: 0 0 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+#projects .project-image-slider-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  display: block;
+  cursor: zoom-in;
+}
+
+/* AI Notes screenshot lightbox */
+body.ai-notes-modal-open {
+  overflow: hidden;
+}
+.ai-notes-image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 10050;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  box-sizing: border-box;
+}
+.ai-notes-image-modal.is-open {
+  display: flex;
+}
+.ai-notes-image-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.72);
+  cursor: pointer;
+}
+.ai-notes-image-modal-panel {
+  position: relative;
+  z-index: 1;
+  max-width: min(96vw, 1200px);
+  max-height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.ai-notes-image-modal-img {
+  max-width: 100%;
+  max-height: calc(92vh - 56px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
+  outline: none;
+}
+.ai-notes-image-modal-close {
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  background: #008073;
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 40px;
+  cursor: pointer;
+  padding: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+.ai-notes-image-modal-close:hover,
+.ai-notes-image-modal-close:focus {
+  background: #00695c;
+  outline: none;
+}
+.ai-notes-image-modal-toolbar {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 12px;
+}
+.ai-notes-modal-nav.project-image-slider-btn {
+  position: static;
+  transform: none;
+}
+@media (prefers-reduced-motion: reduce) {
+  .ai-notes-image-modal-img {
+    box-shadow: none;
+  }
+}
+#projects .project-image-slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 4;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.45);
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  line-height: 36px;
+  text-align: center;
+  transition: background 0.2s;
+}
+#projects .project-image-slider-btn:hover,
+#projects .project-image-slider-btn:focus {
+  background: rgba(0, 128, 115, 0.9);
+  outline: none;
+}
+#projects .project-image-slider-prev {
+  left: 6px;
+}
+#projects .project-image-slider-next {
+  right: 6px;
+}
+#projects .project-image-slider-dots {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  z-index: 4;
+}
+#projects .project-image-slider-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+#projects .project-image-slider-dot.is-active {
+  background: #008073;
+  transform: scale(1.2);
+}
+@media (prefers-reduced-motion: reduce) {
+  #projects .project-image-slider-track,
+  #projects .project-image-slider-dot {
+    transition: none;
+  }
+}
+
 #contact a:not(.btn-floating) {
   bottom: 6px;
   left: 20px;

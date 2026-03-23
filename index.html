@@ -219,7 +219,7 @@
                   <i class="fa fa-linkedin"></i>
                 </button>
               </a>
-              <a href="https://github.com/BhavuBhanushali" target="_blank">
+              <a href="https://github.com/BhaveshBhanushali7501" target="_blank">
                 <button class="icon-btn github">
                   <i class="fa fa-github"></i>
                 </button>
@@ -313,8 +313,8 @@
               <!-- <div class="col s12 m10"> -->
               <div class="col s12 m10">
                 <p>
-                  <span class="card-title"><a href="https://www.zhiffy.com/" target="_blank"
-                      class="teal-text hoverline">Spyhunter IT Solution</a></span>
+                  <span class="card-title"><a href="https://tenthspiretechnologies.com/" target="_blank"
+                      class="teal-text hoverline">Tenth Spire Technologies</a></span>
                 </p>
               </div>
             </div>
@@ -343,52 +343,97 @@
     </section>
 
     <!-- Fourth Section: Projects -->
-    <!-- <section id="projects" class="section scrollspy">
+    <section id="projects" class="section scrollspy animate-on-scroll">
       <h3 class="page-title white-text teal">Projects</h3>
       <div class="container">
         <div class="row">
-
           <div class="col s12 m6 l4">
             <div class="card medium">
-              <div class="card-image waves-effect waves-block waves-light">
-                <img alt="music streaming app" src="public/img/project-music-player.png" style="height: 100%; width: 100%" class="activator" />
+              <div class="card-image waves-effect waves-block waves-light project-card-slider-wrap">
+                <div id="ai-notes-project-slider" class="project-image-slider" role="region"
+                  aria-roledescription="carousel" aria-label="AI Notes app screenshots">
+                  <div class="project-image-slider-viewport" tabindex="0" title="Click image to enlarge">
+                    <div id="ai-notes-project-slider-track" class="project-image-slider-track">
+                      <figure class="project-image-slider-slide">
+                        <img alt="AI Notes: note editor with AI actions (light theme)"
+                          src="public/img/electron-project/Electron-app-1.png" loading="eager" fetchpriority="high" />
+                      </figure>
+                      <figure class="project-image-slider-slide">
+                        <img alt="AI Notes: empty state sidebar (light theme)"
+                          src="public/img/electron-project/Electron-app-2.png" loading="lazy" />
+                      </figure>
+                      <figure class="project-image-slider-slide">
+                        <img alt="AI Notes: empty state (dark theme)"
+                          src="public/img/electron-project/Electron-app-3.png" loading="lazy" />
+                      </figure>
+                      <figure class="project-image-slider-slide">
+                        <img alt="AI Notes: note with AI on this note (dark theme)"
+                          src="public/img/electron-project/Electron-app-4.png" loading="lazy" />
+                      </figure>
+                      <figure class="project-image-slider-slide">
+                        <img alt="AI Notes: chat with your notes panel (light theme)"
+                          src="public/img/electron-project/Electron-app-5.png" loading="lazy" />
+                      </figure>
+                      <figure class="project-image-slider-slide">
+                        <img alt="AI Notes: new note with title and body (light theme)"
+                          src="public/img/electron-project/Electron-app-6.png" loading="lazy" />
+                      </figure>
+                      <figure class="project-image-slider-slide">
+                        <img alt="AI Notes: additional screenshot"
+                          src="public/img/electron-project/Electron-app-7.png" loading="lazy" />
+                      </figure>
+                    </div>
+                  </div>
+                  <button type="button" class="project-image-slider-btn project-image-slider-prev"
+                    aria-controls="ai-notes-project-slider-track" aria-label="Previous screenshot">
+                    <i class="fa fa-chevron-left" aria-hidden="true"></i>
+                  </button>
+                  <button type="button" class="project-image-slider-btn project-image-slider-next"
+                    aria-controls="ai-notes-project-slider-track" aria-label="Next screenshot">
+                    <i class="fa fa-chevron-right" aria-hidden="true"></i>
+                  </button>
+                  <div class="project-image-slider-dots" role="tablist" aria-label="Screenshot"></div>
+                </div>
               </div>
               <div class="card-content">
-                <span class="card-title activator teal-text hoverline">Music Player Web-App<i
+                <span class="card-title activator teal-text hoverline">AI Notes - Desktop App<i
                     class="mdi-navigation-more-vert right"></i></span>
                 <p>
-                  A music streaming web app based on Django
+                  Desktop notes app with AI summaries and an in-app chat bot to refine your notes. Dark and light themes, Google Sign-In via OAuth deep link back into the app, built with Electron, Vite, React, and Tailwind.
                 </p>
               </div>
               <div class="card-reveal">
                 <span class="card-title grey-text"><small>Accomplishments</small><i
                     class="mdi-navigation-close right"></i></span>
                 <ul>
-                  <li><b>Tools:</b> Django, HTML, CSS, Bootstrap, SQLite, AWS S3, Heroku</li>
-                  <li>Register/login to the web app(with OAuth-based Google Sign-In).</li>
-                  <li>Search and filter songs based on language and singer.</li>
-                  <li>Create multiple playlists and add/remove songs to/from playlist.</li>
-                  <li>Scroll through recently played/viewed songs.</li>
-
-
+                  <li><b>Tools:</b> Electron, Vite, React, JavaScript, Tailwind CSS</li>
+                  <li>Dark and light themes with a switchable UI.</li>
+                  <li>Google Sign-In using OAuth with a deep link / app URL scheme so the authorization redirect returns to the desktop client and completes the flow inside the app.</li>
+                  <li>AI-assisted notes: save content, generate summaries, and get suggestions that help tighten and reorganize your notes.</li>
+                  <li>Built-in AI chat bot for contextual questions alongside your workspace.</li>
+                  <li>Vite-powered React renderer with Electron main and preload separated for IPC and packaging.</li>
                 </ul>
-                <div class="card-action">
-                  <a aria-label="Visit " href="https://galvanic-music.herokuapp.com/" target="_blank" data-position="top"
-                    data-tooltip="View Online"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-external-link"></i></a>
-                  <a aria-label="Visit the GitHub repo for  project" href="https://github.com/varadbhogayata/music-player"
-                    target="_blank" data-position="top" data-tooltip="View Source"
-                    class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i
-                      class="fa fa-github"></i></a>
-                </div>
+                <p class="center-align electron-project-reveal-logos" style="margin-top: 1rem;">
+                  <img alt="Electron" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/electron/electron-original.svg" class="responsive-img" style="max-height: 56px; width: auto; display: inline-block; vertical-align: middle; margin: 0 0.35rem;" />
+                  <img alt="Vite" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg" class="responsive-img" style="max-height: 56px; width: auto; display: inline-block; vertical-align: middle; margin: 0 0.35rem;" />
+                  <img alt="React" src="public/img/react-300.png" class="responsive-img" style="max-height: 56px; width: auto; display: inline-block; vertical-align: middle; margin: 0 0.35rem;" />
+                  <img alt="JavaScript" src="public/img/js-300.png" class="responsive-img" style="max-height: 56px; width: auto; display: inline-block; vertical-align: middle; margin: 0 0.35rem;" />
+                  <img alt="Tailwind CSS" src="https://cdn.simpleicons.org/tailwindcss/06B6D4" class="responsive-img" style="max-height: 56px; width: auto; display: inline-block; vertical-align: middle; margin: 0 0.35rem;" />
+                </p>
               </div>
             </div>
-          </div>      
-
+            <a class="electron-app-download waves-effect waves-dark"
+              href="https://drive.google.com/file/d/1PXHXZc8vvs6t864Ap0skxy73YPj8_7tA/view?usp=drive_link"
+              target="_blank" rel="noopener noreferrer"
+              aria-label="Download AI Notes (Google Drive)">
+              <span class="btn-floating btn-large waves-effect waves-light blue-grey electron-app-download-icon"><i
+                  class="fa fa-download" aria-hidden="true"></i></span>
+              <span class="electron-app-download-label teal-text">Download app</span>
+            </a>
+          </div>
         </div>
       </div>
-    </section> -->
+    </section>
 
     <!-- Fifth Section: Skills -->
     <section id="skills" class="section scrollspy animate-on-scroll">
@@ -620,11 +665,11 @@
               class="hoverline">bhaveshgajra4599@gmail.com</a></a>
         </p>
         <p>
-          <a aria-label="View Varad on GitHub" href="https://github.com/BhavuBhanushali" target="_blank"
-            data-position="top" data-tooltip="View Varad on GitHub"
+          <a aria-label="View Bhavesh on GitHub" href="https://github.com/BhaveshBhanushali7501" target="_blank"
+            data-position="top" data-tooltip="View Bhavesh on GitHub"
             class="btn-floating btn-large waves-effect waves-light blue-grey tooltipped"><i class="fa fa-github"></i><a
-              aria-label="Varad on Github" href="https://github.com/BhavuBhanushali" class="hoverline"
-              target="_blank">github.com/BhavuBhanushali</a></a>
+              aria-label="Bhavesh on GitHub" href="https://github.com/BhaveshBhanushali7501" class="hoverline"
+              target="_blank">github.com/BhaveshBhanushali7501</a></a>
         </p>
         <p>
           <a aria-label="View Varad on LinkedIn" href="https://www.linkedin.com/in/bhavesh-bhanushali-a359aa185/" target="_blank"
@@ -636,6 +681,29 @@
       </div>
     </section>
   </main>
+
+  <div id="ai-notes-image-modal" class="ai-notes-image-modal" role="dialog" aria-modal="true"
+    aria-label="Enlarged AI Notes screenshot" aria-hidden="true">
+    <div class="ai-notes-image-modal-backdrop" data-ai-notes-modal-close tabindex="-1"></div>
+    <div class="ai-notes-image-modal-panel">
+      <button type="button" class="ai-notes-image-modal-close waves-effect waves-light" data-ai-notes-modal-close
+        aria-label="Close screenshot">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </button>
+      <img id="ai-notes-modal-img" class="ai-notes-image-modal-img"
+        src="public/img/electron-project/Electron-app-1.png" alt="" tabindex="-1" />
+      <div class="ai-notes-image-modal-toolbar">
+        <button type="button" class="project-image-slider-btn ai-notes-modal-nav" id="ai-notes-modal-prev"
+          aria-label="Previous screenshot">
+          <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        </button>
+        <button type="button" class="project-image-slider-btn ai-notes-modal-nav" id="ai-notes-modal-next"
+          aria-label="Next screenshot">
+          <i class="fa fa-chevron-right" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
 
   <!-- typed.js -->
   <script src="public/vendor/typed.js/typed.min.js"></script>
@@ -691,6 +759,151 @@
       els.forEach(function (el) {
         observer.observe(el)
       })
+    })()
+
+    /* AI Notes project card: screenshot slider (controls stopPropagation so Materialize card activator only fires on the image area) */
+    ;(function () {
+      var root = document.getElementById("ai-notes-project-slider")
+      if (!root) return
+      var track = root.querySelector(".project-image-slider-track")
+      var slides = root.querySelectorAll(".project-image-slider-slide")
+      var prevBtn = root.querySelector(".project-image-slider-prev")
+      var nextBtn = root.querySelector(".project-image-slider-next")
+      var dotsWrap = root.querySelector(".project-image-slider-dots")
+      var viewport = root.querySelector(".project-image-slider-viewport")
+      var total = slides.length
+      var index = 0
+
+      function go(to) {
+        index = ((to % total) + total) % total
+        track.style.transform = "translateX(-" + index * 100 + "%)"
+        var dots = dotsWrap.querySelectorAll(".project-image-slider-dot")
+        for (var d = 0; d < dots.length; d++) {
+          dots[d].classList.toggle("is-active", d === index)
+          dots[d].setAttribute("aria-selected", d === index ? "true" : "false")
+        }
+      }
+
+      for (var j = 0; j < total; j++) {
+        ;(function (idx) {
+          var dot = document.createElement("button")
+          dot.type = "button"
+          dot.className = "project-image-slider-dot"
+          dot.setAttribute("role", "tab")
+          dot.setAttribute("aria-label", "Show screenshot " + (idx + 1) + " of " + total)
+          dot.addEventListener("click", function (e) {
+            e.stopPropagation()
+            go(idx)
+          })
+          dot.addEventListener("mousedown", function (e) {
+            e.stopPropagation()
+          })
+          dotsWrap.appendChild(dot)
+        })(j)
+      }
+
+      prevBtn.addEventListener("click", function (e) {
+        e.stopPropagation()
+        go(index - 1)
+      })
+      nextBtn.addEventListener("click", function (e) {
+        e.stopPropagation()
+        go(index + 1)
+      })
+      prevBtn.addEventListener("mousedown", function (e) {
+        e.stopPropagation()
+      })
+      nextBtn.addEventListener("mousedown", function (e) {
+        e.stopPropagation()
+      })
+
+      viewport.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") {
+          e.preventDefault()
+          go(index - 1)
+        }
+        if (e.key === "ArrowRight") {
+          e.preventDefault()
+          go(index + 1)
+        }
+      })
+
+      var modal = document.getElementById("ai-notes-image-modal")
+      var modalImg = document.getElementById("ai-notes-modal-img")
+      var modalPrev = document.getElementById("ai-notes-modal-prev")
+      var modalNext = document.getElementById("ai-notes-modal-next")
+
+      function syncModalImage() {
+        var cur = slides[index].querySelector("img")
+        if (!cur || !modalImg) return
+        modalImg.src = cur.src
+        modalImg.alt = cur.alt
+      }
+
+      function openImageModal() {
+        if (!modal || !modalImg) return
+        syncModalImage()
+        modal.classList.add("is-open")
+        modal.setAttribute("aria-hidden", "false")
+        document.body.classList.add("ai-notes-modal-open")
+        modalImg.focus()
+      }
+
+      function closeImageModal() {
+        if (!modal) return
+        modal.classList.remove("is-open")
+        modal.setAttribute("aria-hidden", "true")
+        document.body.classList.remove("ai-notes-modal-open")
+        viewport.focus()
+      }
+
+      viewport.addEventListener("click", function (e) {
+        if (!e.target.closest(".project-image-slider-slide img")) return
+        e.stopPropagation()
+        openImageModal()
+      })
+
+      var closeSelectors = modal ? modal.querySelectorAll("[data-ai-notes-modal-close]") : []
+      for (var c = 0; c < closeSelectors.length; c++) {
+        closeSelectors[c].addEventListener("click", function (e) {
+          e.preventDefault()
+          closeImageModal()
+        })
+      }
+
+      if (modalPrev) {
+        modalPrev.addEventListener("click", function (e) {
+          e.stopPropagation()
+          go(index - 1)
+          syncModalImage()
+        })
+      }
+      if (modalNext) {
+        modalNext.addEventListener("click", function (e) {
+          e.stopPropagation()
+          go(index + 1)
+          syncModalImage()
+        })
+      }
+
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape" && modal && modal.classList.contains("is-open")) {
+          closeImageModal()
+        }
+        if (!modal || !modal.classList.contains("is-open")) return
+        if (e.key === "ArrowLeft") {
+          e.preventDefault()
+          go(index - 1)
+          syncModalImage()
+        }
+        if (e.key === "ArrowRight") {
+          e.preventDefault()
+          go(index + 1)
+          syncModalImage()
+        }
+      })
+
+      go(0)
     })()
   </script>
 </body>
