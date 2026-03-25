@@ -924,6 +924,20 @@ small {
   }
 }
 
+#resume .resume-actions {
+  margin-top: 1rem;
+}
+#resume .resume-btn {
+  margin: 0.35rem 0.5rem 0.35rem 0;
+  vertical-align: middle;
+}
+@media (max-width: 600px) {
+  #resume .resume-btn {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
 /* ===== Load and scroll animations (pro) ===== */
 :root {
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);

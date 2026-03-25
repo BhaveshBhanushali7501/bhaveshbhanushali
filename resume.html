@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhavesh Bhanushali - Resume</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f4f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+      padding: 30px 15px;
+    }
+
+    .resume {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: #ffffff;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .header {
+      background: linear-gradient(135deg, #0f172a, #1d4ed8);
+      color: #ffffff;
+      padding: 40px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      margin-bottom: 8px;
+    }
+
+    .header h2 {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 18px;
+      color: #dbeafe;
+    }
+
+    .summary {
+      font-size: 15px;
+      max-width: 850px;
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+
+    .sidebar {
+      background: #f8fafc;
+      padding: 30px 24px;
+      border-right: 1px solid #e5e7eb;
+    }
+
+    .content {
+      padding: 30px 32px;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section h3 {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #1d4ed8;
+      margin-bottom: 10px;
+      border-bottom: 2px solid #dbeafe;
+      padding-bottom: 8px;
+    }
+
+    .contact p,
+    .edu-item p,
+    .project p,
+    .job p,
+    .skill-list li {
+      font-size: 14px;
+      margin-bottom: 8px;
+    }
+
+    .contact a {
+      color: #1d4ed8;
+      text-decoration: none;
+      word-break: break-word;
+    }
+
+    .skill-group {
+      margin-bottom: 16px;
+    }
+
+    .skill-group h4 {
+      font-size: 14px;
+      margin-bottom: 8px;
+      color: #111827;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tag {
+      background: #e0ecff;
+      color: #1e40af;
+      font-size: 13px;
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+
+    .job,
+    .project,
+    .edu-item {
+      margin-bottom: 16px;
+    }
+
+    .job-header,
+    .project-header,
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      /* margin-bottom: 6px; */
+    }
+    .edu-details {
+        font-size: 12px;
+    }
+
+    .job-header h4,
+    .project-header h4,
+    .edu-header h4 {
+      font-size: 16px;
+      color: #111827;
+    }
+
+    .muted {
+      color: #6b7280;
+      font-size: 14px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 8px;
+    }
+
+    li {
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .main {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #e5e7eb;
+      }
+
+      .header {
+        padding: 28px 24px;
+      }
+
+      .content,
+      .sidebar {
+        padding: 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume">
+    <header class="header">
+      <h1>Bhavesh Bhanushali</h1>
+      <h2>Frontend-focused JavaScript Developer</h2>
+      <p class="summary">
+        4+ years shipping web, mobile, and desktop apps with React, Next.js, React Native,
+        Node, and Electron. REST APIs, auth (Google, Auth0), SQL/NoSQL, testing, and AI integrations.
+      </p>
+    </header>
+
+    <div class="main">
+      <aside class="sidebar">
+        <section class="section contact">
+          <h3>Contact</h3>
+          <p><strong>Location:</strong> Gujarat, India</p>
+          <p><strong>Phone:</strong> <a href="tel:+919724720202">9724720202</a></p>
+          <p><strong>Email:</strong> <a href="mailto:bhaveshgajra4599@gmail.com">bhaveshgajra4599@gmail.com</a></p>
+          <p><strong>GitHub:</strong> <a href="https://github.com/BhaveshBhanushali7501" target="_blank">github.com/BhaveshBhanushali7501</a></p>
+          <p><strong>Portfolio:</strong> <a href="https://bhavesh-bhanushali.netlify.app" target="_blank">bhavesh-bhanushali.netlify.app</a></p>
+        </section>
+
+        <section class="section">
+          <h3>Core Skills</h3>
+
+          <div class="skill-group">
+            <h4>Frontend</h4>
+            <div class="tags">
+              <span class="tag">React.js</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">React Native</span>
+              <span class="tag">HTML5</span>
+              <span class="tag">CSS3</span>
+              <span class="tag">Tailwind</span>
+              <span class="tag">Material UI</span>
+              <span class="tag">Ant Design</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Backend</h4>
+            <div class="tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">Fastify</span>              
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Database</h4>
+            <div class="tags">
+              <span class="tag">MySQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">MongoDB</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">SQLite</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <h4>Tools</h4>
+            <div class="tags">
+              <span class="tag">Git</span>
+              <span class="tag">Postman</span>
+              <span class="tag">Vercel</span>
+              <span class="tag">Netlify</span>
+              <span class="tag">VS Code</span>
+              <span class="tag">Cursor</span>
+              <span class="tag">Jira</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Education</h3>
+          <div class="edu-item">
+            <div class="edu-header">
+              <h4>MCA</h4>
+            </div>
+            <p class="edu-details">Gujarat Vidyapith, Ahmedabad</p>
+          </div>
+
+          <div class="edu-item">
+            <div class="edu-header">
+              <h4>B.Sc. Computer Science</h4>
+            </div>
+            <p class="edu-details">Veer Narmad South Gujarat University, Surat</p>
+          </div>
+        </section>
+      </aside>
+
+      <main class="content">
+        <section class="section">
+          <h3>Work Experience</h3>
+          <div class="job">
+            <div class="job-header">
+              <h4>Tenthspire Technologies</h4>
+              <span class="muted">2021 – Present</span>
+            </div>
+            <p class="muted">Surat, Gujarat | React / React Native / Node.js Developer</p>
+            <ul>
+              <li>Developed desktop applications using Electron.js.</li>
+              <li>Built cross-platform mobile applications using React Native.</li>
+              <li>Developed web applications using React.js and Next.js.</li>
+              <li>Built backend services and REST APIs using Node.js and Express.js.</li>
+              <li>Worked with MySQL and MongoDB databases.</li>
+              <li>Implemented authentication systems including Google Auth and Auth0.</li>
+              <li>Performed testing, debugging, and bug fixing.</li>
+              <li>Integrated AI-based features and improved performance.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="section">
+          <h3>Projects</h3>
+
+          <div class="project">
+            <div class="project-header">
+              <h4>Clinic Genie</h4>
+            </div>
+            <p>Clinic management platform using React.js, Node.js, and MongoDB.</p>
+            <p><strong>Stack:</strong> React.js, Node.js, MongoDB</p>
+          </div>
+
+          <div class="project">
+            <div class="project-header">
+              <h4>Tribes Life</h4>
+            </div>
+            <p>Mobile application built using React Native and Firebase.</p>
+            <p><strong>Stack:</strong> React Native, Firebase</p>
+          </div>
+
+          <div class="project">
+            <div class="project-header">
+              <h4>Electron Desktop Utility</h4>
+            </div>
+            <p>Cross-platform desktop application using Electron.js, React, and Vite.</p>
+            <p><strong>Stack:</strong> Electron.js, React, Firebase, OAuth, Tailwind, SQLite</p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </div>
+  <script>
+    (function () {
+      var el = document.getElementById('portfolio-site-link');
+      if (el) el.setAttribute('href', new URL('index.html', window.location.href).href);
+    })();
+  </script>
+</body>
+</html>
